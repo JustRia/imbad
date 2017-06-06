@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WIP - Service</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Support Tool Mockup</a>
+            </div>
+            <!-- /.navbar-header -->
+
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="service.html"><i class="fa fa-gamepad fa-fw"></i> Service<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="packs.html">Pack Configuration</a>
+                                </li>
+                                <li>
+                                    <a href="tenantExample.html">Tenant A<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level in">
+                                        <li>
+                                            <a href="titleExample.html">Title1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="support.html"><i class="fa fa-support fa-fw"></i> Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Service</h1>
+                    <h2 style="text-align: -webkit-center;"> Ninja Game </h2>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Tenant Name: </span>
+                <input type="text" class="form-control" placeholder="Tenant Name" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Partition Account: </span>
+                <input type="text" class="form-control" readonly placeholder="Partition Account" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Telemetry Endpoint: </span>
+                <input type="text" class="form-control" readonly placeholder="Telemetry Endpoint" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <h4>CMS Config</h4>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Catalog Root Content: </span>
+                <input type="text" class="form-control" readonly placeholder="Catalog Root Content" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Authentication Thumbprint: </span>
+                <input type="text" class="form-control" readonly placeholder="Authentication Thumbprint" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Packs Root Content: </span>
+                <input type="text" class="form-control" readonly placeholder="Packs Root Content" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Service Endpoint</span>
+                <input type="text" class="form-control" readonly placeholder="Service Endpoint" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Starting Wallet</h4>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Currency Type</th>
+                                        <th>Amount</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>Gold</td>
+                                        <td>10</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>Silver</td>
+                                        <td>50</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Default Wallet Mapping</h4>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Wallet Id</th>
+                                        <th>Wallet Friendly Name</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Default Inventory Mapping</h4>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Inventory Id</th>
+                                        <th>Inventory Friendly Name</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Account Types</h4>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>-</th>
+                                        <th>-</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

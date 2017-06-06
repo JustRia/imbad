@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WIP - Service</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="xboxMarketEdit" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Marketplace</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 style="text-align: -webkit-center;">Xbox Marketplace</h4>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Xbox Live Service Configuration: </span>
+                        <input type="text" class="form-control" placeholder="Xbox Live Service Configuration" aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Business Partner Certificate Thumbprint: </span>
+                        <input type="text" class="form-control" placeholder="Business Partner Certificate Thumbprint: " aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Inventory Service Url:</span>
+                        <input type="text" class="form-control" placeholder="Inventory Service Url:" aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">XASS Service Url:</span>
+                        <input type="text" class="form-control" placeholder="XASS Service Url:" aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">XSTS Service Url:</span>
+                        <input type="text" class="form-control" placeholder="XSTS Service Url:" aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Title Endpoints Url:</span>
+                        <input type="text" class="form-control" placeholder="Title Endpoints Url:" aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Sandbox Id:</span>
+                        <input type="text" class="form-control" placeholder="Sandbox Id:" aria-describedby="basic-addon1">
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4>Wallet Offers</h4>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>Offer Id</th>
+                                                <th>Name</th>
+                                                <th>Currency</th>
+                                                <th>Amount</th>
+                                                <th>Options</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                                <td>678540</td>
+                                                <td>Item1</td>
+                                                <td>Silver</td>
+                                                <td>20</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="even gradeC">
+                                                <td>565564</td>
+                                                <td>Item2</td>
+                                                <td>gold</td>
+                                                <td>10</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="odd gradeX">
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr class="even gradeC">
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4>Inventory Offers</h4>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>Offer Id</th>
+                                                <th>Offer Name</th>
+                                                <th>Count</th>
+                                                <th>Options</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd">
+                                                <td>4894132</td>
+                                                <td>Potion pack</td>
+                                                <td>2</td>
+                                                <td><button type="button" class="btn btn-default btn-sm" data-toggle="collapse"
+                                                        data-target="#editingPortionPack">Edit</button></td>
+                                            </tr>
+                                            <tr id="editingPortionPack" class="collapse">
+                                                <td colspan="4">
+                                                    <p>Editing Potion Pack</p>
+                                                    <br />
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon" id="basic-addon1">Offer Id:</span>
+                                                        <input type="text" class="form-control" placeholder="4894132" aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <br />
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon" id="basic-addon1">Name:</span>
+                                                        <input type="text" class="form-control" placeholder="Potion Pack" aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <br />
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <h4>Awarded Items</h4>
+                                                                </div>
+                                                                <!-- /.panel-heading -->
+                                                                <div class="panel-body">
+                                                                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Instance Id</th>
+                                                                                <th>Friendly Name</th>
+                                                                                <th>Type</th>
+                                                                                <th>Quantity</th>
+                                                                                <th>Consumable</th>
+                                                                                <th>Unique</th>
+                                                                                <th>Actor Bound</th>
+                                                                                <th>Entitlement</th>
+                                                                                <th># of Properties</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="odd gradeX">
+                                                                                <td></td>
+                                                                                <td>Bronze Sword</td>
+                                                                                <td>bronze_sword</td>
+                                                                                <td>1</td>
+                                                                                <td>
+                                                                                    <input type="checkbox" value="">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="checkbox" value="">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="checkbox" value="">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="checkbox" value="">
+                                                                                </td>
+                                                                                <td>
+                                                                                    4
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <!-- /.panel-body -->
+                                                            </div>
+                                                            <!-- /.panel -->
+                                                        </div>
+                                                        <!-- /.col-lg-12 -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="amazonMarketEdit" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Marketplace</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <h4 style="text-align: -webkit-center;">Amazon Marketplace</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Support Tool Mockup</a>
+            </div>
+            <!-- /.navbar-header -->
+
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="service.html"><i class="fa fa-gamepad fa-fw"></i> Service<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="packs.html">Pack Configuration</a>
+                                </li>
+                                <li>
+                                    <a href="tenantExample.html">Tenant A<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="titleExample.html">Title1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="support.html"><i class="fa fa-support fa-fw"></i> Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 style="text-align: -webkit-center;"> &lt;Title Group Name Here&gt; </h2>
+                    <h4 style="text-align: -webkit-center;"> &lt;Title Group Name Here&gt; </h4>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Title Id: </span>
+                <input type="text" class="form-control" placeholder="Title Id" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Title Name: </span>
+                <input type="text" class="form-control" placeholder="Title Name" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Client Certificates</h4>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Thumbprint</th>
+                                        <th>Role</th>
+                                        <th>Experiation Date</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Marketplaces</h4>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Wallet Offers</th>
+                                        <th>Inventory Offers</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>Xbox</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td><button type="button" class="btn btn-default btn-sm" data-toggle="collapse" data-target="#editingXboxMarketplace">Edit</button></td>
+                                    </tr>
+                                    <tr id="editingXboxMarketplace" class="collapse" style="background: #f9f9f9;">
+                                        <td colspan="4">
+                                            <h4 style="text-align: -webkit-center;">Xbox Marketplace</h4>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">Xbox Live Service Configuration: </span>
+                                                <input type="text" class="form-control" placeholder="Xbox Live Service Configuration" aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">Business Partner Certificate Thumbprint: </span>
+                                                <input type="text" class="form-control" placeholder="Business Partner Certificate Thumbprint: " aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">Inventory Service Url:</span>
+                                                <input type="text" class="form-control" placeholder="Inventory Service Url:" aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">XASS Service Url:</span>
+                                                <input type="text" class="form-control" placeholder="XASS Service Url:" aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">XSTS Service Url:</span>
+                                                <input type="text" class="form-control" placeholder="XSTS Service Url:" aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">Title Endpoints Url:</span>
+                                                <input type="text" class="form-control" placeholder="Title Endpoints Url:" aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">Sandbox Id:</span>
+                                                <input type="text" class="form-control" placeholder="Sandbox Id:" aria-describedby="basic-addon1">
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4>Wallet Offers</h4>
+                                                        </div>
+                                                        <!-- /.panel-heading -->
+                                                        <div class="panel-body">
+                                                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Offer Id</th>
+                                                                        <th>Name</th>
+                                                                        <th>Currency</th>
+                                                                        <th>Amount</th>
+                                                                        <th>Options</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="odd gradeX">
+                                                                        <td>678540</td>
+                                                                        <td>Item1</td>
+                                                                        <td>Silver</td>
+                                                                        <td>20</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr class="even gradeC">
+                                                                        <td>565564</td>
+                                                                        <td>Item2</td>
+                                                                        <td>gold</td>
+                                                                        <td>10</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr class="odd gradeX">
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                    <tr class="even gradeC">
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!-- /.panel-body -->
+                                                    </div>
+                                                    <!-- /.panel -->
+                                                </div>
+                                                <!-- /.col-lg-12 -->
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4>Inventory Offers</h4>
+                                                        </div>
+                                                        <!-- /.panel-heading -->
+                                                        <div class="panel-body">
+                                                            <table width="100%" class="table table-bordered table-hover" id="dataTables-example">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Offer Id</th>
+                                                                        <th>Offer Name</th>
+                                                                        <th>Count</th>
+                                                                        <th>Options</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="odd">
+                                                                        <td>4894132</td>
+                                                                        <td>Potion pack</td>
+                                                                        <td>2</td>
+                                                                        <td><button type="button" class="btn btn-default btn-sm"
+                                                                                data-toggle="collapse" data-target="#editingPortionPack">Edit</button></td>
+                                                                    </tr>
+                                                                    <tr id="editingPortionPack" class="collapse">
+                                                                        <td colspan="4">
+                                                                            <p>Editing Potion Pack</p>
+                                                                            <br />
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" id="basic-addon1">Offer Id:</span>
+                                                                                <input type="text" class="form-control" placeholder="4894132" aria-describedby="basic-addon1">
+                                                                            </div>
+                                                                            <br />
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" id="basic-addon1">Name:</span>
+                                                                                <input type="text" class="form-control" placeholder="Potion Pack" aria-describedby="basic-addon1">
+                                                                            </div>
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="row">
+                                                                                <div class="col-lg-12">
+                                                                                    <div class="panel panel-default">
+                                                                                        <div class="panel-heading">
+                                                                                            <h4>Awarded Items</h4>
+                                                                                        </div>
+                                                                                        <!-- /.panel-heading -->
+                                                                                        <div class="panel-body">
+                                                                                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th>Instance Id</th>
+                                                                                                        <th>Friendly Name</th>
+                                                                                                        <th>Type</th>
+                                                                                                        <th>Quantity</th>
+                                                                                                        <th>Consumable</th>
+                                                                                                        <th>Unique</th>
+                                                                                                        <th>Actor Bound</th>
+                                                                                                        <th>Entitlement</th>
+                                                                                                        <th># of Properties</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr class="odd gradeX">
+                                                                                                        <td></td>
+                                                                                                        <td>Bronze Sword</td>
+                                                                                                        <td>bronze_sword</td>
+                                                                                                        <td>1</td>
+                                                                                                        <td>
+                                                                                                            <input type="checkbox" value="">
+                                                                                                        </td>
+                                                                                                        <td>
+                                                                                                            <input type="checkbox" value="">
+                                                                                                        </td>
+                                                                                                        <td>
+                                                                                                            <input type="checkbox" value="">
+                                                                                                        </td>
+                                                                                                        <td>
+                                                                                                            <input type="checkbox" value="">
+                                                                                                        </td>
+                                                                                                        <td>
+                                                                                                            4
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                        <!-- /.panel-body -->
+                                                                                    </div>
+                                                                                    <!-- /.panel -->
+                                                                                </div>
+                                                                                <!-- /.col-lg-12 -->
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="even">
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                    <tr class="even">
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!-- /.panel-body -->
+                                                    </div>
+                                                    <!-- /.panel -->
+                                                </div>
+                                                <!-- /.col-lg-12 -->
+                                            </div>
+                                            <div style="text-align: center">
+                                                <button class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#editingXboxMarketplace">Save</button>
+                                                <button class="btn btn-warning btn-lg" data-toggle="collapse" data-target="#editingXboxMarketplace">Close</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>Amazon</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#amazonMarketEdit">Edit</button></td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="../vendor/raphael/raphael.min.js"></script>
+        <script src="../vendor/morrisjs/morris.min.js"></script>
+        <script src="../data/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
