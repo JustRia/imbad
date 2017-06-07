@@ -166,22 +166,22 @@
                     <div class="row form-group">
                         <div class="col col-lg-12">
                             <ul class="nav nav-tabs">
-                                <li role="presentation" class="active"><a href="#">Wallet</a></li>
-                                <li role="presentation"><a href="support-inventory.html">Inventory</a></li>
+                                <li role="presentation" ><a href="support-wallet.html">Wallet</a></li>
+                                <li role="presentation" class="active"><a href="#">Inventory</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!--Wallet Inventory Selector-->
+                    <!-- Inventory Selector-->
                     <div class="row form-group">
                         <div class="col col-lg-12">
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Wallet ID
+                                    Inventory ID
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">Wallet 0</a></li>
-                                    <li><a href="#">Wallet 1</a></li>
+                                    <li><a href="#">Inventory 0</a></li>
+                                    <li><a href="#">Inventory 1</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -189,15 +189,15 @@
                     <!--Main Content-->
                     <div class="row">
                         <!-- History Panel-->
-                        <div class="col col-lg-8">
+                        <div class="col col-lg-7">
                             <div class="panel panel-default">
-                                <div class="panel-heading">Wallet History</div>
+                                <div class="panel-heading">Inventory History</div>
                                 <div class="panel-body">
                                     <div class="container-fluid">
                                         <!--Filter Row-->
                                         <div class="row">
                                             <!--Filter Options-->
-                                            <div class="col-lg-8" align="center">
+                                            <div class="col-lg-9" align="left">
                                                 <table class="table">
                                                     <tbody>
                                                         <tr>
@@ -220,10 +220,10 @@
                                                                 </div>
                                                             </td>
                                                             <td style="border-top: none;">
-                                                                <button type="button" class="btn btn-default">Type <span class="caret"></span></button>
+                                                                <button type="button" class="btn btn-default">Action <span class="caret"></span></button>
                                                             </td>
                                                             <td style="border-top: none;">
-                                                                <button type="button" class="btn btn-default">Currency <span class="caret"></span></button>
+                                                                <button type="button" class="btn btn-default">Item <span class="caret"></span></button>
                                                             </td>
 
                                                         </tr>
@@ -231,7 +231,7 @@
                                                 </table>
                                             </div>
                                             <!--Clear Filter Button-->
-                                            <div class="col-lg-4" align="right">
+                                            <div class="col-lg-3" align="right">
                                                 <button type="button" class="btn btn-default">
                                                     Clear Filters
                                                 </button>
@@ -243,84 +243,33 @@
                                                 <table class="table table-bordered table-striped table-responsive">
                                                     <thead>
                                                     <tr>
-                                                        <th>Transaction Type</th>
+                                                        <th>Action</th>
                                                         <th>Date</th>
-                                                        <th>Currency</th>
-                                                        <th>Amount</th>
-                                                        <th>Balance</th>
+                                                        <th>Item Name</th>
+                                                        <th>Quantity</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>DEBIT</td>
+                                                        <td>Update</td>
                                                         <td>2017-06-05, 16:02</td>
-                                                        <td>silver</td>
+                                                        <td>Item 0</td>
                                                         <td>5</td>
-                                                        <td>1</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 16:01</td>
-                                                        <td>gold</td>
-                                                        <td>20</td>
-                                                        <td>48</td>
+                                                        <td>Update</td>
+                                                        <td>2017-06-05, 16:02</td>
+                                                        <td>Item 1</td>
+                                                        <td>3</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
+                                                        <td>Add</td>
+                                                        <td>2017-06-05, 15:01</td>
+                                                        <td>Item 2</td>
+                                                        <td>6</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>CREDIT</td>
-                                                        <td>2017-06-05, 15:59</td>
-                                                        <td>gold</td>
-                                                        <td>17</td>
-                                                        <td>48</td>
-                                                    </tr>
+
+                                                    
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -342,50 +291,67 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Current Balance Panel-->
-                        <div class="col col-lg-4">
+                        <!-- Current Inventory Panel-->
+                        <div class="col col-lg-5">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class-"col-lg-12">
-                                        <!-- Current Balance-->
+                                    <div class="col-lg-12">
+                                        <!-- Current Inventory-->
                                         <div class="panel panel-default">
-                                            <div class="panel-heading">Current Balance</div>
+                                            <div class="panel-heading">Current Inventory</div>
                                             <div class="panel-body">
                                                 <table class="table table-bordered table-striped table-responsive">
                                                     <thead>
                                                     <tr>
-                                                        <th>Currency</th>
-                                                        <th>Amount</th>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Quantity</th>
 
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>gold</td>
-                                                        <td>48</td>
+                                                        <td>Item 0</td>
+                                                        <td>Type 0</td>
+                                                        <td>5</td>
 
                                                     </tr>
                                                     <tr>
-                                                        <td>silver</td>
-                                                        <td>1</td>
+                                                        <td>Item 1</td>
+                                                        <td>Type 0</td>
+                                                        <td>3</td>
 
                                                     </tr>
                                                     <tr>
-                                                        <td>bronze</td>
-                                                        <td>33</td>
+                                                        <td>Item 2</td>
+                                                        <td>Type 1</td>
+                                                        <td>2</td>
+
                                                     </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <nav aria-label="...">
+                                                        <ul class="pager">
+                                                            <li><a>Previous</a></li>
+                                                            1/1
+                                                            <li><a>Next</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6" align="right">
-                                        <button type="button" class="btn btn-primary">Grant Currency</button>
+                                        <button type="button" class="btn btn-primary">Grant Items</button>
                                     </div>
                                     <div class="col-lg-6" align="left">
-                                        <button type="button" class="btn btn-primary">Revoke Currency</button>
+                                        <button type="button" class="btn btn-primary">Revoke Items</button>
                                     </div>
                                 </div>
                             </div>
